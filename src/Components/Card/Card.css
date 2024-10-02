@@ -1,0 +1,126 @@
+.card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 5px 8px rgba(48, 48, 48, 0.05);
+  width: 350px; 
+  height: 120px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.ticket-id {
+  color: #616161;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: 2px solid white;
+}
+
+.status-indicator.available {
+  background-color: #00ff00;
+}
+
+.card-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px; /* Reduced margin */
+}
+
+.status-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  flex-shrink: 0; /* Ensure consistent size */
+}
+
+.card-title {
+  font-size: 14px; 
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  line-height: 1.2em; /* Adjust line height */
+  max-height: 2.4em; /* 2 lines * line-height */
+}
+
+.card-tags {
+  display: flex;
+  gap: 4px; /* Reduced gap */
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  padding: 2px; 
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #7b7b7b;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.priority-tag svg {
+  width: 16px;
+  height: 16px;
+}
+
+.feature-tag {
+  border: 1px solid #e0e0e0;
+  background-color: #ffffff;
+}
+
+.feature-tag svg {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.feature-icon {
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  background-color: #919395;
+  border-radius: 50%;
+}
+
+
+@media (max-width: 600px) {
+  .card {
+    
+    width: 80%;
+  }
+}

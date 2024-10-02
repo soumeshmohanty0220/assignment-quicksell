@@ -1,0 +1,118 @@
+.column {
+  background-color: #f4f5f8;
+  /* background-color: black; */
+  border-radius: 8px;
+  border: 1rem;
+  border-color: black;
+  padding: 16px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  gap: 10px;
+}
+
+.column-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-count {
+  color: #8c8c8c;
+}
+
+.column-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.column-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.user-avatar img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.status-indicator {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ddd;
+  border: 2px solid white;
+}
+
+.status-indicator.available {
+  background-color: #00ff00;
+}
+
+@media (max-width: 600px) {
+  .column {
+    /* flex-direction: row;
+    align-items: center;
+    overflow-x: auto;
+    padding: 8px;
+    gap: 8px; */
+    width: 80vw;
+  }
+
+  .column-header {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+
+  .column-cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .column-cards::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .column-cards::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+
+  .ticket-count {
+    font-size: 12px;
+  }
+
+  .column-title {
+    font-size: 13px;
+  }
+}
